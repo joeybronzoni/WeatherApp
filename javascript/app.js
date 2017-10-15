@@ -4,7 +4,7 @@
 3)make an ajax call to weather api using the coordinates
 4)
 */
-//$(document).ready(function() {
+$(document).ready(function() {
   
   var key ="&APPID=4e93dcc7568b48181fe68e883aede969"; 
   var url ="api.openhweathermap.org/data/2.5/weather?";
@@ -32,30 +32,31 @@
     console.log(WeatherUrl);
     hitApi();
   }
-  function hitApi(res) {
+  function hitApi() {
     console.log(WeatherUrl);
     $.ajax({
       url: WeatherUrl,
       method: "GET",
+      //contentType:"application/json; charset=utf-8", 
       dataType: "jsonp",
-    }).done(function(res, err) {
+    }).done((res, err) => {
+      //console.log(JSON.stringify(res));
+      //var me = JSON.parse(res);
+      alert(JSON.stringify(res));
       console.log(res);
-      
-    }).fail((jqXHR, textStatus, errorThrown) => {
-
-      console.log(jqXHR.status);
-      console.log(textStatus);
-      console.log(errorThrown);
     }
-);
-
-
-    
-  }  
+	   ).fail((jqXHR, textStatus, errorThrown) => {
+	     console.log(jqXHR.status);
+	     console.log(textStatus);
+	     console.log(errorThrown);
+	   }
+		 );
+  }
 
   //----------------------------------------------------------------------------------------
 
-//});
+
+});
 
 
 
