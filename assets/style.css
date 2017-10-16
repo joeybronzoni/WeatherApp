@@ -1,24 +1,35 @@
 nav{
   height:100px;
-  margin:-20px;
-  padding-left:20px;
+  
+  
+  background-color:#6d9eac !important;
+}
+navBar{
+  background-color:#6d9eac !important;
 }
 body{
-    background:url(img/ArchLinuxBadass.png);
+  background:url(img/ArchLinuxBadass.png);
 }
 #mainBox{
-  width:70%;
+  width:50%;
   position:relative;
-  left: 250px;
+  left: 750px;
+  bottom:-50px;
   float:center;
+  background:url(img/weather.jpg);
+  border: 4px double teal;
+  color:black;
   
+  font-size:xx-large;
+  font-family:monospace;
 }
 #mainHead{
-  width:70%;
+  width:50%;
   position:relative;
-  left: 250px;
+  left: 750px;
   float:center;
-
+  bottom:-50px;
+  background-color:#6d9eac;
 }
 
 

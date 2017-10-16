@@ -53,7 +53,7 @@ $(document).ready(function() {
       maxTemp =res.main.temp_max; 
       description = res.weather[0].description;
       wind = res.wind['speed'];
-      $('#fahrenheit').html(temp);
+      $('#temp').html(temp);
       $('#desc').html(description);
       $('#imgdiv').attr('src',img);
       $('#location').html(location);
