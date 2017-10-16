@@ -28,7 +28,7 @@ $(document).ready(function() {
     Geo.lng = position.coords.longitude;
     alert("We found you!" );
     $("#data").html("latitude: " + Geo.lat + "<br>longitude: " + Geo.lng);
-    WeatherUrl = "https://api.openweathermap.org/data/2.5/weather?"+"lat="+Geo.lat+'&lon='+Geo.lng+key;
+    WeatherUrl = "https://api.openweathermap.org/data/2.5/weather?"+"lat="+Geo.lat+"&lon="+Geo.lng+key;
     console.log(WeatherUrl);
     hitApi();
   }
@@ -42,8 +42,14 @@ $(document).ready(function() {
     }).done((res, err) => {
       //console.log(JSON.stringify(res));
       //var me = JSON.parse(res);
-      alert(JSON.stringify(res));
-      console.log(res);
+      //alert(JSON.stringify(res.weather));
+      console.log(JSON.stringify(res.main.temp));//current temp
+      console.log(JSON.stringify(res.main.humidity));//humidity
+      console.log(JSON.stringify(res.main.temp_min));//low temp
+      console.log(JSON.stringify(res.main.temp_max));//high temp
+      console.log(JSON.stringify(res.weather[0].description));//description
+      console.log(JSON.stringify(res.sys));
+      console.log(JSON.stringify(res.weather[0].description));
     }
 	   ).fail((jqXHR, textStatus, errorThrown) => {
 	     console.log(jqXHR.status);
