@@ -1,0 +1,26 @@
+nav{
+  height:100px;
+  margin:-20px;
+  padding-left:20px;
+}
+body{
+    background:url(img/ArchLinuxBadass.png);
+}
+#mainBox{
+  width:70%;
+  position:relative;
+  left: 250px;
+  float:center;
+  
+}
+#mainHead{
+  width:70%;
+  position:relative;
+  left: 250px;
+  float:center;
+
+}
+
+
+/*---------------------------------------------*/
+
