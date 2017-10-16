@@ -28,7 +28,7 @@ $(document).ready(function() {
     Geo.lng = position.coords.longitude;
     alert("We found you!" );
     $("#data").html("latitude: " + Geo.lat + "<br>longitude: " + Geo.lng);
-    WeatherUrl = "https://api.openweathermap.org/data/2.5/weather?"+"lat="+Geo.lat+'&lon='+Geo.lng+key;
+    WeatherUrl = "https://api.openweathermap.org/data/2.5/weather?"+"lat="+Geo.lat+"&lon="+Geo.lng+key;
     console.log(WeatherUrl);
     hitApi();
   }
